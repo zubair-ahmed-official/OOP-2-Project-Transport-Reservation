@@ -158,7 +158,50 @@ namespace Project.Views
 
         private void ticketsGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                ticketId = Int32.Parse(row.Cells["Id"].Value.ToString());
+                customerName.Text = row.Cells["Name"].Value.ToString();
+                phoneBox.Text = row.Cells["Phone"].Value.ToString();
+                ticketSource.Text = row.Cells["Source"].Value.ToString();
+                ticketDest.Text = row.Cells["Destination"].Value.ToString();
+                coachBox.Text = row.Cells["Coach"].Value.ToString();
+                //busType.Text = row.Cells["BusType"].Value.ToString();
+                journeyTime.Text = row.Cells["Time"].Value.ToString();
 
+                DateTime date = DateTime.Parse(row.Cells["Date"].Value.ToString());
+                if (date < journeyDate.MinDate)
+                {
+                    MessageBox.Show("You cannot modify or delete previous Tickets");
+                    reloadTickets();
+                    return;
+                }
+                else journeyDate.Text = date.ToString();
+
+                var abustype = row.Cells["BusType"].Value.ToString();
+                if (abustype.Equals("AC"))
+                {
+                    acRadioButton.Checked = true;
+                    nonAcRadioButton.Checked = false;
+                }
+                else if (abustype == "Non AC")
+                {
+                    nonAcRadioButton.Checked = true;
+                    acRadioButton.Checked = false;
+                }
+                else
+                {
+                    acRadioBtn.Checked = false;
+                    nonAcRadioBtn.Checked = false;
+                }
+
+                if (ticketId > 0)
+                {
+                    ticketBookBtn.Enabled = false;
+                }
+                trashTicket.Visible = true;
+            }
         }
        // string bustype = "";
        // private int ticketId = 0;
@@ -178,7 +221,7 @@ namespace Project.Views
             ticketBookBtn.Enabled = true;
 
             var tickets = TicketsController.getAllTickets();
-            ticketsGridView.DataSource = tickets;
+            dataGridView1.DataSource = tickets;
         }
 
         private void RadioButtonAC(object sender, EventArgs e)
@@ -196,7 +239,7 @@ namespace Project.Views
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = this.ticketsGridView.Rows[e.RowIndex];
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 ticketId = Int32.Parse(row.Cells["Id"].Value.ToString());
                 customerName.Text = row.Cells["Name"].Value.ToString();
                 phoneBox.Text = row.Cells["Phone"].Value.ToString();
@@ -322,6 +365,11 @@ namespace Project.Views
         {
             bool res = BusesController.deleteBus(busId);
             if (res) { reloadBuses(); MessageBox.Show("Bus deleted"); }
+        }
+
+        private void TicketsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

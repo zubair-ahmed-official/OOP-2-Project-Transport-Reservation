@@ -33,3 +33,16 @@ E:\Transport Reservation\Project\Project\obj\Debug\Project.csproj.GenerateResour
 E:\Transport Reservation\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 E:\Transport Reservation\Project\Project\obj\Debug\Project.exe
 E:\Transport Reservation\Project\Project\obj\Debug\Project.pdb
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.AdminDashboard.resources
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.LoginForm.resources
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.Properties.Resources.resources
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.Views.ManagerDashboard.resources
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.Views.SalesManDashBoard.resources
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.exe
+E:\Projects\Transport Reservation\Project\Project\obj\Debug\Project.pdb
+E:\Projects\Transport Reservation\Project\Project\bin\Debug\Project.exe.config
+E:\Projects\Transport Reservation\Project\Project\bin\Debug\Project.exe
+E:\Projects\Transport Reservation\Project\Project\bin\Debug\Project.pdb

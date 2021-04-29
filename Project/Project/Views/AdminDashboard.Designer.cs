@@ -518,7 +518,7 @@ namespace Project
             this.customersPanel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersPanel.Location = new System.Drawing.Point(0, 0);
             this.customersPanel.Name = "customersPanel";
-            this.customersPanel.Size = new System.Drawing.Size(883, 460);
+            this.customersPanel.Size = new System.Drawing.Size(883, 461);
             this.customersPanel.TabIndex = 18;
             this.customersPanel.Visible = false;
             // 
